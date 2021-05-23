@@ -38,7 +38,10 @@ final class Versions
   'doctrine/dbal' => '3.1.0@5ba62e7e40df119424866064faf2cef66cb5232a',
   'doctrine/deprecations' => 'v0.5.3@9504165960a1f83cc1480e2be1dd0a0478561314',
   'doctrine/event-manager' => '1.1.1@41370af6a30faa9dc0368c4a6814d596e81aba7f',
-  'ozmos/task-1-php' => '1.0.0+no-version-set@',
+  'fakerphp/faker' => 'v1.14.1@ed22aee8d17c7b396f74a58b1e7fefa4f90d5ef1',
+  'psr/container' => '1.1.1@8622567409010282b7aeebe4bb841fe98b58dcaf',
+  'symfony/deprecation-contracts' => 'v2.4.0@5f38c8804a9e97d23e0c8d63341088cd8a22d627',
+  'ozmos/task-1-php' => 'dev-master@5d81c4b23bebe8f59263409aa0a7cd9062652bd2',
 );
 
     private function __construct()

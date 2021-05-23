@@ -4,7 +4,7 @@ namespace Database;
 
 use Doctrine\DBAL\DriverManager;
 
-class Connection
+class DatabaseConnection
 {
     private $params;
     public $conn;
@@ -24,5 +24,4 @@ class Connection
 
         $this->queryBuilder = $this->conn->createQueryBuilder();
     }
-
 }

@@ -3,13 +3,18 @@
 require_once '../vendor/autoload.php';
 require_once '../classes/Database/DatabaseConnection.php';
 require_once '../classes/Database/Migration.php';
+require_once '../classes/Database/DataFactory.php';
+require_once '../classes/Controllers/DataController.php';
 
-use Database\Connection;
+
+use Database\DatabaseConnection;
 use Database\Migration;
+use Database\DataFactory;
+use Controllers\DataController;
 
-$conn = new Connection();
+$connection = new DatabaseConnection();
 
-$conn->conn->beginTransaction();
+$connection->conn->beginTransaction();
 
 try {
     // create schemas
@@ -17,21 +22,16 @@ try {
     $migration->up();
 
     // populate tables
+    $factory = new DataFactory();
+    $factory->populate(7);
+
+
+    // display data
+    $userController = new DataController();
+    var_dump($userController->index());
     
-
-    
-
-    // $sql = $conn->queryBuilder
-    //     ->select('id', 'username', 'email')
-    //     ->from('users');
-    // $stmt = $conn->conn->prepare($sql);
-    // $result = $stmt->executeQuery();
-    // $articles = $result->fetchAllAssociativeIndexed();
-
-    // var_dump($articles);
-    echo "all good";
-    $conn->conn->commit();
+    $connection->conn->commit();
 } catch (\Exception $e) {
-    $conn->conn->rollBack();
+    $connection->conn->rollBack();
     throw $e;
 }
