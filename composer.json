@@ -11,6 +11,7 @@
     "minimum-stability": "stable",
     "require": {
         "doctrine/dbal": "^3.1",
-        "fakerphp/faker": "^1.14"
+        "fakerphp/faker": "^1.14",
+        "symfony/console": "^5.2"
     }
 }

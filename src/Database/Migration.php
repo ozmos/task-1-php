@@ -14,9 +14,7 @@ class Migration extends DatabaseConnection
     {
         parent::__construct();
         $this->schema = new \Doctrine\DBAL\Schema\Schema();
-        // $this->connection = new DatabaseConnection();
         $this->schemaManager = $this->conn->getSchemaManager();
-        // $this->schemaManager = $this->connection->conn->getSchemaManager();
     }
 
     public function up()
@@ -45,8 +43,6 @@ class Migration extends DatabaseConnection
 
         $this->conn->executeStatement($queries[0]);
         $queries = $this->schema->toSql($this->conn->getDatabasePlatform());
-
-        // $this->connection->conn->executeStatement($queries[0]);
     }
 
     public function exists()
