@@ -2,7 +2,7 @@
 
 namespace App\Command;
 
-use Controllers\DataController;
+use Models\data;
 use Database\DataFactory;
 use Database\Migration;
 use Symfony\Component\Console\Command\Command;
@@ -37,8 +37,8 @@ class PopulateDatabaseCommand extends Command
         $factory->populate($input->getArgument('number'));
 
         // display number of records in table
-        $data = new DataController();
-        $records = count($data->index());
+        $data = new data();
+        $records = count($data->users());
         $output->writeln('There are ' . $records . ' records in the users table');
 
         return Command::SUCCESS;

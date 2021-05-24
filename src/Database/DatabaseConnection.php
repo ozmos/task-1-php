@@ -11,7 +11,7 @@ class DatabaseConnection
     public $queryBuilder;
     public $schemaManager;
 
-    public function __construct() 
+    public function __construct()
     {
         $this->params = array(
             'dbname' => 'task_1_php',

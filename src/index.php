@@ -4,12 +4,12 @@ require_once '../vendor/autoload.php';
 require_once 'Database/DatabaseConnection.php';
 require_once 'Database/Migration.php';
 require_once 'Database/DataFactory.php';
-require_once 'Controllers/DataController.php';
+require_once 'Models/Data.php';
 
 use Database\DatabaseConnection;
 use Database\Migration;
 use Database\DataFactory;
-use Controllers\DataController;
+use Models\data;
 
 $connection = new DatabaseConnection();
 
@@ -26,9 +26,9 @@ try {
 
 
     // display data
-    $userController = new DataController();
-    var_dump($userController->index());
-    
+    $data = new data();
+    var_dump($data->users());
+
     $connection->conn->commit();
 } catch (\Exception $e) {
     $connection->conn->rollBack();

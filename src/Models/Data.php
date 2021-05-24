@@ -1,17 +1,22 @@
 <?php
 
-namespace Controllers;
+namespace Models;
 
 use Database\DatabaseConnection;
 
-class DataController extends DatabaseConnection
+class Data extends DatabaseConnection
 {
     public function __construct()
     {
         parent::__construct();
     }
 
-    public function index()
+    /**
+     * Retrieves list of users in database
+     *
+     * @return array
+     */
+    public function users(): array
     {
         $sql = $this->queryBuilder
         ->select('username', 'email', 'address')

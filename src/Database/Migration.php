@@ -14,6 +14,11 @@ class Migration extends DatabaseConnection
         $this->schema = new \Doctrine\DBAL\Schema\Schema();
     }
 
+    /**
+     * Creates 'user' table fields and migrates them to the database
+     *
+     * @return void
+     */
     public function up()
     {
         if ($this->exists()) {
@@ -22,13 +27,13 @@ class Migration extends DatabaseConnection
 
         $users = $this->schema->createTable('users');
         $users->addColumn(
-            "id", 
-            "integer", 
+            "id",
+            "integer",
             array(
-                "unsigned" => true, 
+                "unsigned" => true,
                 "autoincrement" => true
                 )
-            );
+        );
         $users->addColumn("username", "string", array("length" => 32));
         $users->addColumn("email", "string", array("length" => 128));
         $users->addColumn("address", "string", array("length" => 128));
@@ -42,7 +47,12 @@ class Migration extends DatabaseConnection
         $queries = $this->schema->toSql($this->conn->getDatabasePlatform());
     }
 
-    public function exists()
+    /**
+     * Checks if database already contains tables
+     *
+     * @return boolean
+     */
+    public function exists(): bool
     {
         $databases = $this->schemaManager->listTables();
         return count($databases) > 0;

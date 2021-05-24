@@ -3,6 +3,7 @@
 namespace Database;
 
 use Faker\Factory;
+use Database\DatabaseConnection;
 
 class DataFactory extends DatabaseConnection
 {
@@ -14,6 +15,12 @@ class DataFactory extends DatabaseConnection
         $this->faker = Factory::create();
     }
 
+    /**
+     * populates tables with dummy data
+     *
+     * @param integer $num
+     * @return void
+     */
     public function populate(int $num = 1)
     {
         foreach (range(0, $num - 1) as $value) {
@@ -24,6 +31,4 @@ class DataFactory extends DatabaseConnection
             ));
         }
     }
-
-
 }

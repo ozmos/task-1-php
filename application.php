@@ -6,7 +6,7 @@ require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/src/Database/DatabaseConnection.php';
 require __DIR__ . '/src/Database/Migration.php';
 require __DIR__ . '/src/Database/DataFactory.php';
-require __DIR__ . '/src/Controllers/DataController.php';
+require __DIR__ . '/src/Models/Data.php';
 require __DIR__ . '/src/Command/PopulateDatabaseCommand.php';
 require __DIR__ . '/src/Command/DisplayDataCommand.php';
 
