@@ -18,7 +18,10 @@ class PopulateDatabaseCommand extends Command
     {
         $this
             ->setDescription('Creates Tables for database and populates them with randomized data')
-            ->setHelp('Sets up the schema and populates tables with dummy data.  Specify number of records to add with `number` argument');
+            ->setHelp("Sets up the schema and populates tables with dummy data.  Specify number of records to add with `number` argument. 
+            Example usage to create 5 records: \n
+            $~ cd path/to/project/root \n
+            $~ php application.php database:populate-database 5");
 
         $this->addArgument('number', InputArgument::REQUIRED, 'number of records to insert');
     }

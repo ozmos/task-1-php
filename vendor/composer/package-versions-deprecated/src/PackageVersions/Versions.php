@@ -50,7 +50,7 @@ final class Versions
   'symfony/polyfill-php80' => 'v1.22.1@dc3063ba22c2a1fd2f45ed856374d79114998f91',
   'symfony/service-contracts' => 'v2.4.0@f040a30e04b57fbcc9c6cbcf4dbaa96bd318b9bb',
   'symfony/string' => 'v5.2.8@01b35eb64cac8467c3f94cd0ce2d0d376bb7d1db',
-  'ozmos/task-1-php' => 'dev-main@48bd1cef77f404d6330e360bf7a7a24d6b6f6fb8',
+  'ozmos/task-1-php' => 'dev-main@2902ff42505596fc60ad43720952031f18f13b65',
 );
 
     private function __construct()

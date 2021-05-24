@@ -9,8 +9,9 @@ class DatabaseConnection
     private $params;
     public $conn;
     public $queryBuilder;
+    public $schemaManager;
 
-    public function __construct()
+    public function __construct() 
     {
         $this->params = array(
             'dbname' => 'task_1_php',
@@ -23,5 +24,7 @@ class DatabaseConnection
         $this->conn = DriverManager::getConnection($this->params);
 
         $this->queryBuilder = $this->conn->createQueryBuilder();
+
+        $this->schemaManager = $this->conn->getSchemaManager();
     }
 }

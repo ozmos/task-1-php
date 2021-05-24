@@ -6,7 +6,6 @@ require_once 'Database/Migration.php';
 require_once 'Database/DataFactory.php';
 require_once 'Controllers/DataController.php';
 
-
 use Database\DatabaseConnection;
 use Database\Migration;
 use Database\DataFactory;

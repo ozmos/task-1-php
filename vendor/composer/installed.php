@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '48bd1cef77f404d6330e360bf7a7a24d6b6f6fb8',
+    'reference' => '2902ff42505596fc60ad43720952031f18f13b65',
     'name' => 'ozmos/task-1-php',
   ),
   'versions' => 
@@ -79,7 +79,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '48bd1cef77f404d6330e360bf7a7a24d6b6f6fb8',
+      'reference' => '2902ff42505596fc60ad43720952031f18f13b65',
     ),
     'psr/container' => 
     array (

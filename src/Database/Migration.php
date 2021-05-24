@@ -7,14 +7,11 @@ use Database\DatabaseConnection;
 class Migration extends DatabaseConnection
 {
     private $schema;
-    // private $connection;
-    private $schemaManager;
 
     public function __construct()
     {
         parent::__construct();
         $this->schema = new \Doctrine\DBAL\Schema\Schema();
-        $this->schemaManager = $this->conn->getSchemaManager();
     }
 
     public function up()
