@@ -3,6 +3,7 @@
 namespace Database;
 
 use Database\DatabaseConnection;
+use Doctrine\DBAL\Schema\Schema;
 
 class Migration extends DatabaseConnection
 {
@@ -11,7 +12,7 @@ class Migration extends DatabaseConnection
     public function __construct()
     {
         parent::__construct();
-        $this->schema = new \Doctrine\DBAL\Schema\Schema();
+        $this->schema = new Schema();
     }
 
     /**

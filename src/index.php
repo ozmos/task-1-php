@@ -5,6 +5,8 @@ require_once 'Database/DatabaseConnection.php';
 require_once 'Database/Migration.php';
 require_once 'Database/DataFactory.php';
 require_once 'Models/Data.php';
+require_once 'Tests/Calculator.php';
+require_once 'Tests/CalculatorTest.php';
 
 use Database\DatabaseConnection;
 use Database\Migration;
