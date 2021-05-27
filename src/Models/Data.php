@@ -6,9 +6,12 @@ use Database\DatabaseConnection;
 
 class Data extends DatabaseConnection
 {
+    private $queryBuilder;
+
     public function __construct()
     {
         parent::__construct();
+        $this->queryBuilder = $this->conn->createQueryBuilder();
     }
 
     /**

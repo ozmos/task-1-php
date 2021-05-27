@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '5f88fd003f4d7850e6251bcf37b3f4322861a049',
+    'reference' => '32c792198f44a3f930dd88194bea890a2ebc0780',
     'name' => 'ozmos/task-1-php',
   ),
   'versions' => 
@@ -123,7 +123,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '5f88fd003f4d7850e6251bcf37b3f4322861a049',
+      'reference' => '32c792198f44a3f930dd88194bea890a2ebc0780',
     ),
     'phar-io/manifest' => 
     array (

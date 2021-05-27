@@ -3,16 +3,17 @@
 namespace Database;
 
 use Database\DatabaseConnection;
-use Doctrine\DBAL\Schema\Schema;
 
 class Migration extends DatabaseConnection
 {
     private $schema;
+    private $schemaManager;
 
-    public function __construct()
+    public function __construct($schema)
     {
         parent::__construct();
-        $this->schema = new Schema();
+        $this->schemaManager = $this->conn->getSchemaManager();
+        $this->schema = $schema;
     }
 
     /**

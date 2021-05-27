@@ -2,7 +2,7 @@
 
 namespace App\Command;
 
-use Models\data;
+use Models\Data;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -19,7 +19,7 @@ class DisplayDataCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         // display data
-        $data = new data();
+        $data = new Data();
         $records = $data->users();
 
         foreach ($records as $key => $value) {

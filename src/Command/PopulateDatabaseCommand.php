@@ -2,9 +2,10 @@
 
 namespace App\Command;
 
-use Models\data;
+use Models\Data;
 use Database\DataFactory;
 use Database\Migration;
+use Doctrine\DBAL\Schema\Schema;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -29,7 +30,7 @@ class PopulateDatabaseCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         // creates schema
-        $migration = new Migration();
+        $migration = new Migration(new Schema());
         $migration->up();
 
         // populate tables
@@ -37,7 +38,7 @@ class PopulateDatabaseCommand extends Command
         $factory->populate($input->getArgument('number'));
 
         // display number of records in table
-        $data = new data();
+        $data = new Data();
         $records = count($data->users());
         $output->writeln('There are ' . $records . ' records in the users table');
 

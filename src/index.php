@@ -1,17 +1,12 @@
 <?php
 
 require_once '../vendor/autoload.php';
-require_once 'Database/DatabaseConnection.php';
-require_once 'Database/Migration.php';
-require_once 'Database/DataFactory.php';
-require_once 'Models/Data.php';
-require_once 'Tests/Calculator.php';
-require_once 'Tests/CalculatorTest.php';
 
 use Database\DatabaseConnection;
+use Doctrine\DBAL\Schema\Schema;
 use Database\Migration;
 use Database\DataFactory;
-use Models\data;
+use Models\Data;
 
 $connection = new DatabaseConnection();
 
@@ -19,7 +14,7 @@ $connection->conn->beginTransaction();
 
 try {
     // create schemas
-    $migration = new Migration();
+    $migration = new Migration(new Schema());
     $migration->up();
 
     // populate tables
@@ -28,7 +23,7 @@ try {
 
 
     // display data
-    $data = new data();
+    $data = new Data();
     var_dump($data->users());
 
     $connection->conn->commit();

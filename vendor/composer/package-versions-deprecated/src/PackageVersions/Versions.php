@@ -83,7 +83,7 @@ final class Versions
   'sebastian/version' => '3.0.2@c6c1022351a901512170118436c764e473f6de8c',
   'theseer/tokenizer' => '1.2.0@75a63c33a8577608444246075ea0af0d052e452a',
   'webmozart/assert' => '1.10.0@6964c76c7804814a842473e0c8fd15bab0f18e25',
-  'ozmos/task-1-php' => 'dev-main@5f88fd003f4d7850e6251bcf37b3f4322861a049',
+  'ozmos/task-1-php' => 'dev-main@32c792198f44a3f930dd88194bea890a2ebc0780',
 );
 
     private function __construct()
